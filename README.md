@@ -35,6 +35,16 @@ Responder preguntas de negocio mediante consultas SQL sobre una base de datos re
  - Agregaciones
  - Análisis de datos estructurados
 
+## Ejemplo de consulta
+
+```sql
+SELECT
+    customer_id,
+    COUNT(*) AS total_orders
+FROM orders
+GROUP BY customer_id
+ORDER BY total_orders DESC;
+
    ## Estructura del repositorio
 
 ├── sql-business-analysis.ipynb  
